@@ -1,0 +1,76 @@
+baseURL = 'https://mgwinsor.dev/'
+languageCode = 'en-us'
+title = 'Michael Winsor'
+theme = "gokarna"
+enableRobotsTXT = true
+
+pygmentsStyle = "monokai"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    pre = "<span data-feather='home'></span>"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    pre = "<span data-feather='book'></span>"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    pre = "<span data-feather='terminal'></span>"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "resume"
+    name = "Resume"
+    url = "/resume.pdf"
+    pre = "<span data-feather='file-text'></span>"
+    weight = 3
+    [menu.main.params]
+      newPage = true
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    pre = "<span data-feather='tag'></span>"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "github"
+    url = "https://github.com/mgwinsor"
+    pre = "<span data-feather='github'></span>"
+    weight = 5
+    [menu.main.params]
+      newPage = true
+
+[params]
+  description = "Data Engineer"
+  avatarURL = "/images/avatar.png"
+  AvatarAltTest = "avatar"
+  avatarSize = "size-l"
+  socialIcons = [
+    {name = "github", url = "https://github.com/mgwinsor"},
+    {name = "linkedin", url = "https://linkedin.com/in/mgwinsor"},
+    {name = "email", url = "mailto:mgwinsor@gmail.com"}
+  ]
+  ShowBackToTopButton = true
+  footer = "mgwinsor.dev"
+  metaKeywords = ["blog", "portfolio", "software", "data", "engineering"]
+
+[params.meta]
+  favicon = true
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false
