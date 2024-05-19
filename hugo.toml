@@ -28,12 +28,19 @@ pygmentsStyle = "monokai"
     pre = "<span data-feather='terminal'></span>"
     weight = 3
 
+  # [[menu.main]]
+  #   identifier = "notes"
+  #   name = "Notes"
+  #   url = "/notes/"
+  #   pre = "<span data-feather='bookmark'></span>"
+  #   weight = 4
+
   [[menu.main]]
     identifier = "resume"
     name = "Resume"
     url = "/resume.pdf"
     pre = "<span data-feather='file-text'></span>"
-    weight = 3
+    weight = 5
     [menu.main.params]
       newPage = true
 
@@ -42,13 +49,13 @@ pygmentsStyle = "monokai"
     name = "Tags"
     url = "/tags/"
     pre = "<span data-feather='tag'></span>"
-    weight = 4
+    weight = 6
 
   [[menu.main]]
     identifier = "github"
     url = "https://github.com/mgwinsor"
     pre = "<span data-feather='github'></span>"
-    weight = 5
+    weight = 7
     [menu.main.params]
       newPage = true
 

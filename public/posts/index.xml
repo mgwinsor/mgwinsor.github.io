@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Michael Winsor</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Michael Winsor</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 May 2024 21:21:41 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Ode to Vim (by ChatGPT)</title>
+      <link>http://localhost:1313/posts/ode-to-vim/</link>
+      <pubDate>Sun, 19 May 2024 21:21:41 +0800</pubDate>
+      <guid>http://localhost:1313/posts/ode-to-vim/</guid>
+      <description>Some time ago, when ChatGPT was still quite new, I asked it to write a poem about vim. The prompt was as follows:&#xA;Can you also write me a poem about vim in the style of Shakespeare?&#xA;The result was amusing enough for me to share it here. Hope you enjoy.&#xA;Of Vim, that editor of text so great, I&amp;rsquo;ll sing a song of high estate. With keystrokes deft and motions quick, It doth make all our coding slick.</description>
+    </item>
+  </channel>
+</rss>
