@@ -4,6 +4,7 @@ date: 2024-05-19T21:21:41+08:00
 draft: false
 type: "post"
 showTableOfContents: false
+tags: ["vim"]
 ---
 
 Some time ago, when ChatGPT was still quite new, I asked it to write a poem
