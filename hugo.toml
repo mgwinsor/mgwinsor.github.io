@@ -60,7 +60,7 @@ pygmentsStyle = "monokai"
       newPage = true
 
 [params]
-  description = "Data Engineer"
+  description = "Software Engineer"
   avatarURL = "/images/avatar.png"
   AvatarAltTest = "avatar"
   avatarSize = "size-l"
