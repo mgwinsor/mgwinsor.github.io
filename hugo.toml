@@ -1,83 +1,106 @@
 baseURL = 'https://mgwinsor.dev/'
+theme = "risotto"
+title = 'mgwinsor dev'
+author = 'Michael Winsor'
 languageCode = 'en-us'
-title = 'Michael Winsor'
-theme = "gokarna"
+DefaultContentLanguage = "en"
+paginate = 3
+enableInlineShortcodes = true
 enableRobotsTXT = true
 
-pygmentsStyle = "monokai"
+ignoreErrors = ["error-remote-getjson"]
+
+sectionPagesMenu = "main"
+
+[params]
+noindex = false
+
+[params.theme]
+palette = "windows-95"
+
+[params.about]
+title = "mgwinsor"
+description = "Welcome to my personal website."
+# logo = "🍚"
+# logo_image = "images/rice.svg"
+
+[[params.socialLinks]]
+icon = "fa-brands fa-github"
+title = "GitHub"
+url = "https://github.com/mgwinsor"
+
+[[params.socialLinks]]
+icon = "fa-solid fa-envelope"
+title = "Email"
+url = "mailto:mgwinsor@gmail.com"
+
+[[params.socialLinks]]
+icon = "ai ai-orcid"
+title = "ORCID"
+url = "https://orcid.org/0000-0001-2345-6789"
 
 [menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    pre = "<span data-feather='home'></span>"
-    weight = 1
 
   [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
+    identifier = "about"
+    name = "about"
+    url = "/about/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "posts"
     url = "/posts/"
-    pre = "<span data-feather='book'></span>"
-    weight = 2
+    weight = 20
 
   [[menu.main]]
     identifier = "projects"
-    name = "Projects"
+    name = "projects"
     url = "/projects/"
-    pre = "<span data-feather='terminal'></span>"
-    weight = 3
-
-  # [[menu.main]]
-  #   identifier = "notes"
-  #   name = "Notes"
-  #   url = "/notes/"
-  #   pre = "<span data-feather='bookmark'></span>"
-  #   weight = 4
+    weight = 30
 
   [[menu.main]]
     identifier = "resume"
-    name = "Resume"
+    name = "resume"
     url = "/resume.pdf"
-    pre = "<span data-feather='file-text'></span>"
-    weight = 5
+    weight = 40
     [menu.main.params]
       newPage = true
 
   [[menu.main]]
     identifier = "tags"
-    name = "Tags"
+    name = "tags"
     url = "/tags/"
-    pre = "<span data-feather='tag'></span>"
-    weight = 6
+    weight = 50
 
-  [[menu.main]]
-    identifier = "github"
-    url = "https://github.com/mgwinsor"
-    pre = "<span data-feather='github'></span>"
-    weight = 7
-    [menu.main.params]
-      newPage = true
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
 
-[params]
-  description = "Data Engineer"
-  avatarURL = "/images/avatar.png"
-  AvatarAltTest = "avatar"
-  avatarSize = "size-l"
-  socialIcons = [
-    {name = "github", url = "https://github.com/mgwinsor"},
-    {name = "linkedin", url = "https://linkedin.com/in/mgwinsor"},
-    {name = "email", url = "mailto:mgwinsor@gmail.com"}
-  ]
-  ShowBackToTopButton = true
-  footer = "mgwinsor.dev"
-  metaKeywords = ["blog", "portfolio", "software", "data", "engineering"]
+# For hugo >= 0.60.0, enable inline HTML
+[markup.goldmark.renderer]
+unsafe = true
 
-[params.meta]
-  favicon = true
+# [params]
+#   description = "Data Engineer"
+#   avatarURL = "/images/avatar.png"
+#   AvatarAltTest = "avatar"
+#   avatarSize = "size-l"
+#   socialIcons = [
+#     {name = "github", url = "https://github.com/mgwinsor"},
+#     {name = "linkedin", url = "https://linkedin.com/in/mgwinsor"},
+#     {name = "email", url = "mailto:mgwinsor@gmail.com"}
+#   ]
+#   ShowBackToTopButton = true
+#   footer = "mgwinsor.dev"
+#   metaKeywords = ["blog", "portfolio", "software", "data", "engineering"]
+#
+# [params.meta]
+#   favicon = true
 
-[markup]
-  [markup.tableOfContents]
-    startLevel = 1
-    endLevel = 4
-    ordered = false
+# [markup]
+#   [markup.tableOfContents]
+#     startLevel = 1
+#     endLevel = 4
+#     ordered = false
