@@ -62,14 +62,77 @@ excellent way to Go (no pun intended).
 
 ### Code Examples
 
-With these concepts 
-
-```typescript
-const a = fetch()
-```
+Let's first take a look at some async Python code. Below is a program that
+simulates a network call to fetch some data about some users. We define the
+`fetch_data` function to be asynchronous and await it in `main` function with
+the `asyncio.gather` method.
 
 ```python
-a: int = 5
+import asyncio
+
+
+async def fetch_data(name: str, delay: float) -> str:
+    print(f"Fetching data for {name}...")
+    await asyncio.sleep(delay)  # Simulates a network request
+    print(f"Data for {name} received!")
+    return f"{name} data"
+
+
+async def main() -> tuple[str, str, str]:
+    # Run tasks concurrently
+    results = await asyncio.gather(
+        fetch_data("user1", 2),
+        fetch_data("user2", 1),
+        fetch_data("user3", 3),
+    )
+
+    print(f"All results: {results}")
+    return results
+
+
+# Run the async program
+asyncio.run(main())
+```
+
+The above program returns the following output. Notice that although the
+request for `user1`'s data was sent before the request for `user2`'s data, the
+data for `user2` is received first. This is because we set the delay for
+`user2` as only one second, so it is returned first while we wait for data from
+the other users.
+
+```
+Fetching data for user1...
+Fetching data for user2...
+Fetching data for user3...
+Data for user2 received!
+Data for user1 received!
+Data for user3 received!
+All results: ['user1 data', 'user2 data', 'user3 data']
+```
+
+Now let's look at the same program again, but this time written in TypeScript.
+
+```typescript
+async function fetchData(name: string, delaySeconds: number): Promise<string> {
+  console.log(`Fetching data for ${name}...`);
+  await new Promise(resolve => setTimeout(resolve, delaySeconds * 1000));
+  console.log(`Data for ${name} received!`);
+  return `${name} data`;
+}
+
+async function main(): Promise<string[]> {
+  // Run tasks concurrently
+  const results = await Promise.all([
+    fetchData("user1", 2),
+    fetchData("user2", 1),
+    fetchData("user3", 3)
+  ]);
+  
+  console.log(`All results: ${results}`);
+  return results;
+}
+
+main().catch(error => console.error('Error:', error));
 ```
 
 ## Concurrent Code
